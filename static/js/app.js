@@ -2,7 +2,7 @@
 var tableData = data;
 // Get a reference to the table body
 function builtTable (data) {
-
+// Populate the table field
 var tbody = d3.select("tbody");
 tbody.html('')
 // Console.log the weather data from data.js
@@ -15,6 +15,7 @@ data.forEach((ufoSight) => {
     });
 });
 }
+// Create a build table and filter function
 builtTable (tableData);
 var filters = {};
 
@@ -28,7 +29,7 @@ function updateFilters () {
   else {
   delete filters[filterId];
   }
-
+// Create a 'Filter Table' function
 filterTable();
 }
 function filterTable () {
